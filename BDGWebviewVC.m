@@ -35,7 +35,7 @@
     }
     
     //Add CloseButton
-    if(!self.navigationController) {
+    if(self.navigationController.viewControllers.count==1) {
         //close button
         closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         closeButton.frame = CGRectMake(0, 0, 24, 24);
@@ -105,7 +105,7 @@
             [self performSelector:@selector(setButtonsEnabled) withObject:nil afterDelay:self.buttonDelay];
         }
     }
-    else if(self.buttonDelay != 0 && !self.navigationController) {
+    else if(self.buttonDelay != 0 && self.navigationController.viewControllers.count==1) {
         closeButton.hidden = TRUE;
         [self performSelector:@selector(setCloseButtonEnabled) withObject:nil afterDelay:self.buttonDelay];
     }
