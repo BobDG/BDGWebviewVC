@@ -1,4 +1,4 @@
-BDGWebview
+BDGWebviewVC
 ==========
 
 Webview-based ViewController including navigation buttons and many configurable properties
